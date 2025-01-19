@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_store
+    description: "Dimension table for store table"
+    columns:
+      - name: sk_store_id
+        description: "Primary Key for dim_store"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key

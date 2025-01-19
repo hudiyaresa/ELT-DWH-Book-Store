@@ -1,5 +1,3 @@
-Here's a more organized and visually appealing version of the markdown with a table of contents and clearer section structure for easier understanding:
-
 # Data Warehouse for Online Bookstore
 
 ## Table of Contents

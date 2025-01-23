@@ -217,8 +217,20 @@ pip install -r requirements.txt
 
 ## Documentation
 
-Below are examples of the updated data that will be processed in the data warehouse, with SCD Type 1 applied to the dimension table and SCD Type 2 applied to the snapshot table.
+1. Initial load
+
+![Luigi Graph](img_assets/luigi_graph.png)
+
+![dbt docs linage](img_assets/dbt_docs_lineage.png)
+
+
+2. Below are examples of the updated data that will be processed in the data warehouse, with SCD Type 1 applied to the dimension table and SCD Type 2 applied to the snapshot table.
 
 ![Testing Update Dim Table](img_assets/Testing_Update_Dim_Table.png)
 
 ![Testing Update Snapshot Table](img_assets/Testing_Update_Snapshot.png)
+
+
+3. Testing insert new data
+
+![Testing Insert New Data](img_assets/testing_insert_new_data.png)

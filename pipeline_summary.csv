@@ -89,3 +89,6 @@ timestamp,task, status, execution_time,status,execution_time
 2025-01-19 23:42:21.284523,Extract,,,Success,1.750458002090454
 2025-01-19 23:42:31.094926,Load,,,Success,9.37238907814026
 2025-01-19 23:47:39.189526,Transform,,,Failed,0.0
+2025-01-23 23:41:12.839956,Extract,,,Success,1.1216495037078855
+2025-01-23 23:41:19.567565,Load,,,Success,6.456911325454712
+2025-01-23 23:43:53.962765,Transform,,,Failed,0.0

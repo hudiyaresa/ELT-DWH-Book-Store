@@ -52,7 +52,8 @@ The company currently experiences difficulties in generating analytical reports 
 The proposed solution is to design a Data Warehouse with a dimensional model that includes fact tables for daily sales and order details, and dimension tables for books, customers, and dates. An ELT pipeline will be implemented to extract, transform, and load data into the Data Warehouse, enabling the company to generate insightful reports, improve decision-making and also better operational efficiency.
 
 - **Dimensional Model**: Design a star schema with fact tables for sales and order details and dimension tables for books, customers, and dates.
-- **ELT Pipeline**: Develop a robust ELT pipeline to handle data extraction, transformation, and loading into the Data Warehouse.
+- **ELT Pipeline**: Develop a robust ELT pipeline to handle data extraction, transformation, and loading into the Data Warehouse using Luigi and DBT, including error logging and alerting via Python and Sentry SDK.
+- **Scheduling:** Use cron for scheduling data updates to keep the data warehouse current.
 
 ---
 
@@ -135,7 +136,7 @@ The ELT pipeline will extract data from source systems, transform it into a form
 
 1. **Clone the repository**:  
    ```bash
-   git clone <repo_url>
+   git clone https://github.com/hudiyaresa/ELT-DWH-Book-Store.git
    ```
 
 2. **Create a `.env` file with the following variables**:

@@ -6,11 +6,12 @@
 3. [Design Dimensional Model Process](#design-dimensional-model-process)
 4. [ERD Source and Final Plan](#erd-source-and-final-plan)
 5. [Business Processes and Details](#business-processes-and-details)
-6. [Design of the ETL Pipeline](#design-of-the-etl-pipeline)
+6. [Design of the ELT Pipeline](#design-of-the-elt-pipeline)
 7. [Stack or Tools or Libraries Used](#stack-or-tools-or-libraries-used)
-8. [Running the ETL Pipeline](#running-the-etl-pipeline)
+8. [Running the ELT Pipeline](#running-the-elt-pipeline)
 9. [Orchestrate ELT with Luigi](#orchestrate-elt-with-luigi)
 10. [References](#references)
+10. [Documentation](#documentation)
 
 ---
 
@@ -48,10 +49,10 @@ The project aims to create a Data Warehouse for a company that sells books onlin
 The company currently experiences difficulties in generating analytical reports from its transactional database. This limitation results in suboptimal performance for both transactional and analytical operations.
 
 ### Solution
-The proposed solution is to design a Data Warehouse with a dimensional model that includes fact tables for daily sales and order details, and dimension tables for books, customers, and dates. An ETL pipeline will be implemented to extract, transform, and load data into the Data Warehouse, enabling the company to generate insightful reports, improve decision-making and also better operational efficiency.
+The proposed solution is to design a Data Warehouse with a dimensional model that includes fact tables for daily sales and order details, and dimension tables for books, customers, and dates. An ELT pipeline will be implemented to extract, transform, and load data into the Data Warehouse, enabling the company to generate insightful reports, improve decision-making and also better operational efficiency.
 
 - **Dimensional Model**: Design a star schema with fact tables for sales and order details and dimension tables for books, customers, and dates.
-- **ETL Pipeline**: Develop a robust ETL pipeline to handle data extraction, transformation, and loading into the Data Warehouse.
+- **ELT Pipeline**: Develop a robust ELT pipeline to handle data extraction, transformation, and loading into the Data Warehouse.
 
 ---
 
@@ -106,11 +107,11 @@ The dimensional model is designed to enable efficient querying and reporting by 
 
 ---
 
-## Design of the ETL Pipeline
+## Design of the ELT Pipeline
 
-The ETL pipeline will extract data from source systems, transform it into a format suitable for the Data Warehouse, and load it into the respective tables.
+The ELT pipeline will extract data from source systems, transform it into a format suitable for the Data Warehouse, and load it into the respective tables.
 
-![ETL Pipeline](img_assets/ELT_Illustration.png)
+![ELT Pipeline](img_assets/ELT_Illustration.png)
 
 ### Workflow Description
 
@@ -123,14 +124,14 @@ The ETL pipeline will extract data from source systems, transform it into a form
 ## Stack or Tools or Libraries Used
 
 - **Database**: PostgreSQL
-- **ETL Framework**: dbt (Data Build Tool)
+- **ELT Framework**: dbt (Data Build Tool)
 - **Programming Language**: SQL, Python
 - **Orchestration**: Luigi
 - **Deployment**: Docker
 
 ---
 
-## Running the ETL Pipeline
+## Running the ELT Pipeline
 
 1. **Clone the repository**:  
    ```bash
@@ -210,3 +211,14 @@ pip install -r requirements.txt
 1. [DBT Documentation](https://docs.getdbt.com/)
 2. [Luigi Documentation](https://luigi.readthedocs.io/)
 3. [Sentry SDK](https://docs.sentry.io/platforms/python/)
+
+
+---
+
+## Documentation
+
+Below are examples of the updated data that will be processed in the data warehouse, with SCD Type 1 applied to the dimension table and SCD Type 2 applied to the snapshot table.
+
+![Testing Update Dim Table](img_assets/Testing_Update_Dim_Table.png)
+
+![Testing Update Snapshot Table](img_assets/Testing_Update_Snapshot.png)
